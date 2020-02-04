@@ -25,16 +25,19 @@ const assertArraysEqual = function(arr1, arr2) {
   );
 };
 
-const without = function(arr, itemToRemove) {
-  return arr.filter(el => !itemToRemove.includes(el));
+const flatten = function(arr) {
+  let flattenArr = [];
+  arr.forEach(el => {
+    if (Array.isArray(el)) {
+      console.log(el);
+      flattenArr.push(...el);
+    } else {
+      flattenArr.push(el);
+    }
+  });
+  return flattenArr;
 };
 
-//Test
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-assertArraysEqual(without(["1", "2", "3"], ["1", "2", "3"]), []);
-assertArraysEqual(without(["1", "2", "3"], []), ["1", "2", "3"]);
-
-const words = ["hello", "world", "lighthouse"];
-without(["hello", "world", "lighthouse"], ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+assertArraysEqual(flatten([1, 2, [3, 4, 5], [6]]), [1, 2, 3, 4, 5, 6]);
+assertArraysEqual(flatten([1, [2]]), [1, 2]);
