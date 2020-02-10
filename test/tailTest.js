@@ -8,6 +8,11 @@ describe("#tail", () => {
       "Labs"
     ]);
   });
+  it("original arrays should not be modified", () => {
+    const input = [1, 2, 3];
+    tail(input);
+    assert.deepEqual(input, [1, 2, 3]);
+  });
   it("returns [] for ['Hello']", () => {
     assert.deepEqual(tail(["Hello"]), []);
   });

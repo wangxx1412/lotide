@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@wangxx2020/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of lodash library",
   "main": "",
   "directories": {
     "test": "mocha"
