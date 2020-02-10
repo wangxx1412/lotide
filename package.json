@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangxx1412/lotide.git"
+  },
+  "author": "Xiaoxuan Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangxx1412/lotide/issues"
+  },
+  "homepage": "https://github.com/wangxx1412/lotide#readme"
+}
