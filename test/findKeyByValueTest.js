@@ -1,5 +1,5 @@
 const assert = require("chai").assert;
-const findKeyByValue = require("../findKeyByValue");
+const { findKeyByValue } = require("../index");
 
 describe("#findKeyByValue", () => {
   const bestTVShowsByGenre = {
